@@ -1,4 +1,4 @@
-package com.example.CastleGrimtol;
+package com.company.CastleGrimtol;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
