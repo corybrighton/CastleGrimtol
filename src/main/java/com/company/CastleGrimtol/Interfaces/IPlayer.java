@@ -8,5 +8,5 @@ public interface IPlayer{
 
     String getName();
     List<Item> getInventory();
-    void addInventory(Item item);
+    String addInventory(Item item);
 }

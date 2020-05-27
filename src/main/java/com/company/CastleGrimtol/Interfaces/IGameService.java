@@ -36,7 +36,7 @@ public interface IGameService {
 
     //Validate CurrentRoom.Exits contains the desired direction
     //if it does change the CurrentRoom
-    String Go(String direction);
+    String Go();
 
     //When taking an item be sure the item is in the current room
     //before adding it to the player inventory, Also don't forget to

@@ -10,7 +10,7 @@ public class Room implements IRoom {
     private String description = null;
     private String helpDescription = null;
     private List<Item> items;
-    private final Map<String, IRoom> exits;
+    private final HashMap<String, IRoom> exits;
 
     public Room(String name, String description, String helpDescription) {
         this.name = name;
@@ -46,7 +46,7 @@ public class Room implements IRoom {
     }
 
     @Override
-    public Map<String, IRoom> getExits() {
+    public HashMap<String, IRoom> getExits() {
         return exits;
     }
 

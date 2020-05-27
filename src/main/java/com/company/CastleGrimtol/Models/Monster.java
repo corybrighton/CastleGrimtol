@@ -1,6 +1,8 @@
 package com.company.CastleGrimtol.Models;
 
-import java.util.List;
+import com.company.CastleGrimtol.Interfaces.IRoom;
+
+import java.util.HashMap;
 import java.util.Random;
 
 public class Monster extends Character {
@@ -24,9 +26,10 @@ public class Monster extends Character {
 
     public Room moveRoom(){
         if (movable){
-            List<Room> exits = currentRoom.getExits();
+            HashMap<String, IRoom> exits = currentRoom.getExits();
+            String[] keys = (String[]) exits.keySet().toArray();
             Random random = new Random();
-            currentRoom = exits.get(random.nextInt(exits.size()));
+            currentRoom = (Room) exits.get(keys[random.nextInt(keys.length)]);
         }
         return currentRoom;
     }
