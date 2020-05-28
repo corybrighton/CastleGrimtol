@@ -59,29 +59,6 @@
 				<configuration>
 					<nodeVersion>v12.16.3</nodeVersion>
 				</configuration>
-				<executions>
-					<execution>
-						<id>install-npm</id>
-						<goals>
-							<goal>install-node-and-npm</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>npm-install</id>
-						<goals>
-							<goal>npm</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>npm-build</id>
-						<goals>
-							<goal>npm</goal>
-						</goals>
-						<configuration>
-							<arguments>run-script build</arguments>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
