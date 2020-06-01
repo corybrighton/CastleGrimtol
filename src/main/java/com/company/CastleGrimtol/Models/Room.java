@@ -33,7 +33,16 @@ public class Room implements IRoom {
 
     @Override
     public String getHelpDescription() {
-        return helpDescription;
+        StringBuilder help = new StringBuilder(helpDescription);
+        if (items.size() > 0) {
+            help.append(" There is a ");
+            for (Item item : items) {
+                help.append(item.getName());
+                help.append((items.indexOf(item) == items.size() - 2) ? ", and" :
+                        (items.indexOf(item) == items.size() - 1) ? "" : ", ");
+            }
+        }
+        return help.toString();
     }
 
     public boolean hasDoor(Door door) {
@@ -58,7 +67,7 @@ public class Room implements IRoom {
     @Override
     public Item takeItem(String item) {
         for (Item roomItem : items) {
-            if(roomItem.getName().equalsIgnoreCase(item)){
+            if (roomItem.getName().equalsIgnoreCase(item)) {
                 items.remove(roomItem);
                 return roomItem;
             }

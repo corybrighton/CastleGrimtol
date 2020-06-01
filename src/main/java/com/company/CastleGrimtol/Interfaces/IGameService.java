@@ -2,6 +2,7 @@ package com.company.CastleGrimtol.Interfaces;
 
 
 import com.company.CastleGrimtol.Models.Player;
+import com.company.CastleGrimtol.Models.Reply;
 import com.company.CastleGrimtol.Models.Room;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,7 +27,7 @@ public interface IGameService {
 
     @GetMapping("/grimtol")
     @ResponseBody
-    String GetUserInput(@RequestBody String input);
+    Reply GetUserInput(@RequestBody String input);
 
     //Stops the application
     String Quit();
